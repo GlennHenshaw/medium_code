@@ -37,8 +37,17 @@ let xAxis= svg.append("g")
 
 // Customizations using the axis after it is called
 xAxis.attr("transform",`translate(${0},${height})`);
-xAxis.select(".domain").attr("stroke","#E04836").attr("stroke-width","10").attr("opacity",".6").attr("stroke-dasharray","4");
-xAxis.selectAll(".tick text").attr("font-size","20").attr("rotate","15").attr("font-family","cursive");
-xAxis.selectAll(".tick line").attr("stroke","steelBlue");
-xAxis.select(":nth-child(3) line").attr("stroke-width","10");
+xAxis.select(".domain")
+     .attr("stroke","#E04836")
+     .attr("stroke-width","10")
+     .attr("opacity",".6")
+     .attr("stroke-dasharray","4");
+xAxis.selectAll(".tick text")
+     .attr("font-size","20")
+     .attr("rotate","15")
+     .attr("font-family","cursive");
+xAxis.selectAll(".tick line")
+     .attr("stroke","steelBlue");
+xAxis.select(":nth-child(3) line")
+     .attr("stroke-width","10");
 
