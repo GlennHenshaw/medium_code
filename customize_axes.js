@@ -4,16 +4,17 @@
 // Code from the medium post: https://medium.com/@ghenshaw.work/customizing-axes-in-d3-js-99d58863738b
 //
 
+// Margin convention
 const margin = {top: 20, right: 20, bottom: 20, left: 10};
 const width = 500 - margin.left - margin.right,
       height = 300 - margin.top - margin.bottom;
 
 
 const svg = d3.select("body").append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", `translate(${margin.left},${margin.top})`);
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+              .attr("transform", `translate(${margin.left},${margin.top})`);
 
 
 const min_data = 0, max_data = 10000;
@@ -26,6 +27,7 @@ let xScale = d3.scaleLinear()
 let xAxisGenerator = d3.axisBottom(xScale);
 
 // Customizations using the axis generator
+
 xAxisGenerator.ticks(3);
 xAxisGenerator.tickValues([3000,5000,9000]);
 xAxisGenerator.tickFormat((d,i) => ['A','B','C'][i]);
