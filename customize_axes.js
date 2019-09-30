@@ -1,6 +1,6 @@
 
 //
-// Customizing scales
+// Customizing Axes
 // Code from the medium post: https://medium.com/@ghenshaw.work/customizing-axes-in-d3-js-99d58863738b
 //
 
